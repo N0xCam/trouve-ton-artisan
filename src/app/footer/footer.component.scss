@@ -26,13 +26,15 @@
     flex-direction: column;
     text-align:right;
     width: 100%;
+    color: #f1f8fc;
 }
 
 .myContact {
     padding-top: 0.7em;
     padding-bottom: 0.7em;
     text-align: right;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .legal {
@@ -53,15 +55,18 @@
     padding-left: 1em;
     padding-bottom: 1em;
     font-size: 0.7em;
+    text-decoration: none;
 }
 
 .legalCopyright {
     display: flex;
-    align-items: center;
+    
+    
 }
 
 .copyright {
     padding-right: 1em;
+    display: flex;
 }
 
 .legalText {
@@ -72,7 +77,11 @@
     padding-top: 0.2em;
 }
 
-
+.address {
+    display: flex;
+    flex-direction: column;
+    
+}
 
 
 
