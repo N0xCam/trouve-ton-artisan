@@ -1,0 +1,25 @@
+.Legal {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+
+.titleLegal {
+    font-family: 'Grafik-Bold';
+    flex-direction: column;
+    text-align: center;
+}
+
+.notWorking {
+    width: 20em;
+}
+
+.butLegal {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.textBut {
+    font-family: 'Grafik-Light';
+    text-transform: none;
+}

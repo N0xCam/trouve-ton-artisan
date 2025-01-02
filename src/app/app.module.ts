@@ -8,6 +8,8 @@ import { ListeArtisanComponent } from './liste-artisan/liste-artisan.component';
 import { FicheArtisanComponent } from './fiche-artisan/fiche-artisan.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LegalComponent } from './legal/legal.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './footer/footer.component';
     ListeArtisanComponent,
     FicheArtisanComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LegalComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
