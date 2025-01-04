@@ -10,6 +10,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LegalComponent } from './legal/legal.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BatimentComponent } from './batiment/batiment.component';
+import { ServicesComponent } from './services/services.component';
+import { FabricationComponent } from './fabrication/fabrication.component';
+import { AlimentationComponent } from './alimentation/alimentation.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HeaderComponent,
     FooterComponent,
     LegalComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BatimentComponent,
+    ServicesComponent,
+    FabricationComponent,
+    AlimentationComponent
   ],
   imports: [
     BrowserModule,
