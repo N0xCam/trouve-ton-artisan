@@ -3,11 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ListeArtisanComponent } from './liste-artisan/liste-artisan.component';
 import { FicheArtisanComponent } from './fiche-artisan/fiche-artisan.component';
+import { LegalComponent } from './legal/legal.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
 { path: "", component: HomeComponent},
 { path: "liste-artisan", component:ListeArtisanComponent},
-{ path: "fiche-artisan", component:FicheArtisanComponent}
+{ path: "fiche-artisan", component:FicheArtisanComponent},
+{ path: "legal", component:LegalComponent},
+{ path: "**", component:NotFoundComponent}
+
 ];
 
 @NgModule({
