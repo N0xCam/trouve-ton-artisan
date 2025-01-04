@@ -12,3 +12,7 @@
     font-family: 'Grafik-LightItalic';
     src: url('assets/Graphik-LightItalic-Trial.otf');
 }
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
