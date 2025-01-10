@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,27 +13,32 @@ import { BatimentComponent } from './batiment/batiment.component';
 import { ServicesComponent } from './services/services.component';
 import { FabricationComponent } from './fabrication/fabrication.component';
 import { AlimentationComponent } from './alimentation/alimentation.component';
+import { ArtisanserviceService } from './artisanservice.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+  
     ListeArtisanComponent,
     FicheArtisanComponent,
     HeaderComponent,
     FooterComponent,
     LegalComponent,
     NotFoundComponent,
-    BatimentComponent,
     ServicesComponent,
+    
     FabricationComponent,
     AlimentationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HomeComponent,
+    BatimentComponent,
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ArtisanserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

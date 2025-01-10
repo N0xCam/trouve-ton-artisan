@@ -1,1 +1,22 @@
-<p>batiment works!</p>
+<h2> Artisans </h2>
+
+<ul></ul>
+
+<script>
+    const ulElement = document.querySelector ("ul");
+    fetch
+    ("../../data/datas.json")
+    .then((response) => {
+       return response.json();
+    })
+    .then ((name) => {
+
+        for (const name of names) {
+            const liElement = document.createElement("li");
+            liElement.innerText = id.name;
+            ulElement.appendChild(liElement);
+        }   
+
+
+    });
+</script>
