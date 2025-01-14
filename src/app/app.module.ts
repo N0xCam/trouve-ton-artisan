@@ -15,6 +15,10 @@ import { FabricationComponent } from './fabrication/fabrication.component';
 import { AlimentationComponent } from './alimentation/alimentation.component';
 import { ArtisanserviceService } from './artisanservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TopPipe } from './top.pipe';
+import { SortByNamePipe } from './sort-by-name.pipe';
+import { BatimentPipe } from './batiment.pipe';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
   
     ListeArtisanComponent,
     FicheArtisanComponent,
-    HeaderComponent,
+
     FooterComponent,
     LegalComponent,
     NotFoundComponent,
@@ -30,13 +34,21 @@ import { HttpClientModule } from '@angular/common/http';
     
     FabricationComponent,
     AlimentationComponent
+
+    
+    
   ],
   imports: [
     BrowserModule,
     HomeComponent,
+    HeaderComponent,
     BatimentComponent,
     AppRoutingModule,
     HttpClientModule,
+    BatimentPipe,
+    SortByNamePipe,
+    TopPipe,
+    SearchPipe,
   ],
   providers: [ArtisanserviceService],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 export interface Artisan {
   id: number;
+  image: string;
   name: string;
   specialty: string;
   note: number;
@@ -20,6 +21,7 @@ export interface Artisan {
 export class ArtisanserviceService {
   artisans: Artisan [] = [
     {	id: 1,
+      image : "img/1.jpg",
       "name": "Vallis Bellemare",
       "specialty": "Plombier",
       note: 4,
@@ -32,6 +34,7 @@ export class ArtisanserviceService {
     },
     {
       id: 2,
+      image : "img/2.jpg",
       "name": "Amitee Lécuyer",
       "specialty": "Couturier",
       note: 4.5,
@@ -44,6 +47,7 @@ export class ArtisanserviceService {
     },
     {
       id: 3,
+      image : "img/3.jpg",
       "name": "Leala Dennis",
       "specialty": "Coiffeur",
       note: 3.8,
@@ -56,6 +60,7 @@ export class ArtisanserviceService {
     },
     {
       id: 4,
+      image : "img/4.jpg",
       "name": "Chocolaterie Labbé",
       "specialty": "Chocolatier",
       note: 4.9,
@@ -68,6 +73,7 @@ export class ArtisanserviceService {
     },
     {
       id: 5,
+      image : "img/5.jpg",
       "name": "Claude Quinn",
       "specialty": "Bijoutier",
       note: 4.2,
@@ -80,6 +86,7 @@ export class ArtisanserviceService {
     },
     {
       id: 6,
+      image : "img/6.png",
       "name": "Valérie Laderoute",
       "specialty": "Toiletteur",
       note: 4.5,
@@ -92,6 +99,7 @@ export class ArtisanserviceService {
     },
     {
       id: 7,
+      image : "img/7.jpg",
       "name": "Boutot & fils",
       "specialty": "Menuisier",
       note: 4.7,
@@ -104,6 +112,7 @@ export class ArtisanserviceService {
     },
     {
       id: 8,
+      image : "img/8.jpg",
       "name": "CM Graphisme",
       "specialty": "Webdesign",
       note: 4.4,
@@ -116,6 +125,7 @@ export class ArtisanserviceService {
     },
     {
       id: 9,
+      image : "img/9.jpg",
       "name": "Orville Salmons",
       "specialty": "Chauffagiste",
       note: 5,
@@ -128,6 +138,7 @@ export class ArtisanserviceService {
     },
     {
       id: 10,
+      image : "img/10.jpg",
       "name": "Au pain chaud",
       "specialty": "Boulanger",
       note: 4.8,
@@ -140,6 +151,7 @@ export class ArtisanserviceService {
     },
     {
       id: 11,
+      image : "img/11.jpg",
       "name": "Boucherie Dumont",
       "specialty": "Boucher",
       note: 4.5,
@@ -152,6 +164,7 @@ export class ArtisanserviceService {
     },
     {
       id: 12,
+      image : "img/12.jpg",
       "name": "Mont Blanc Eléctricité",
       "specialty": "Electricien",
       note: 4.5,
@@ -164,6 +177,7 @@ export class ArtisanserviceService {
     },
     {
       id: 13,
+      image : "img/13.jpg",
       "name": "Traiteur Truchon",
       "specialty": "Traiteur",
       note: 4.1,
@@ -176,6 +190,7 @@ export class ArtisanserviceService {
     },
     {
       id: 14,
+      image : "img/14.jpg",
       "name": "Le monde des fleurs",
       "specialty": "Fleuriste",
       note: 4.6,
@@ -188,6 +203,7 @@ export class ArtisanserviceService {
     },
     {
       id: 15,
+      image : "img/15.jpg",
       "name": "Royden Charbonneau",
       "specialty": "Carrossier",
       note: 3.8,
@@ -200,6 +216,7 @@ export class ArtisanserviceService {
     },
     {
       id: 16,
+      image : "img/16.png",
       "name": "Ernest Carignan",
       "specialty": "Ferronnier",
       note: 5,
@@ -212,6 +229,7 @@ export class ArtisanserviceService {
     },
     {
       id: 17,
+      image : "img/17.jpg",
       "name": "C'est sup'hair",
       "specialty": "Coiffeur",
       note: 4.1,
@@ -220,7 +238,8 @@ export class ArtisanserviceService {
       "email":"sup-hair@gmail.com",
       "website":"https://sup-hair.fr",
       "category":"Services",
-      "top": false},
+      "top": false
+    },
   ]
 
   constructor() {}

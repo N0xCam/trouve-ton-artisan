@@ -3,10 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { ArtisanserviceService } from '../artisanservice.service';
 import { ActivatedRoute } from "@angular/router";
 import { CommonModule} from "@angular/common";
+import { TopPipe } from '../top.pipe';
 import { Router } from '@angular/router';
 
 export interface Top3 {
   id: number;
+  image:string;
   name: string;
   specialty: string;
   note: number;
@@ -22,7 +24,7 @@ export interface Top3 {
   selector: 'app-home',
   templateUrl: './home.component.html',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TopPipe],
   styleUrl: './home.component.scss',
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }],
 })

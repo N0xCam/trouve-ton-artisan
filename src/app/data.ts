@@ -9,5 +9,6 @@ export interface MyArtisans {
     email: string;
     website: string;
     category: string;
-    top: string
+    top: boolean
 }
+

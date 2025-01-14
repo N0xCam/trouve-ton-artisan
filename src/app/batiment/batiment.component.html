@@ -1,22 +1,15 @@
 <h2> Artisans </h2>
 
-<ul></ul>
-
-<script>
-    const ulElement = document.querySelector ("ul");
-    fetch
-    ("../../data/datas.json")
-    .then((response) => {
-       return response.json();
-    })
-    .then ((name) => {
-
-        for (const name of names) {
-            const liElement = document.createElement("li");
-            liElement.innerText = id.name;
-            ulElement.appendChild(liElement);
-        }   
 
 
-    });
-</script>
+<ng-container *ngFor="let Top3 of artisans">
+  <li *ngIf="Top3.category">
+  {{ Top3.name }} </li>
+</ng-container>
+ 
+
+
+
+
+
+   
