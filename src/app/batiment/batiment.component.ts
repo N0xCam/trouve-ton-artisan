@@ -3,61 +3,50 @@ import { FormsModule } from '@angular/forms';
 import { ArtisanserviceService } from '../artisanservice.service';
 import { ActivatedRoute } from "@angular/router";
 import { CommonModule} from "@angular/common";
-import { SearchPipe } from '../search.pipe';
+import { ListeArtisanComponent } from '../liste-artisan/liste-artisan.component';
+import { SearchPipe } from '../pipes/search.pipe';
 import { Router } from '@angular/router';
+import { FilterByCategoryPipe } from '../pipes/filter-by-category.pipe';
+import { Data } from '@angular/router';
 
-export interface Top3 {
-  id: number;
-  image:string;
-  name: string;
-  specialty: string;
-  note: number;
-  location: string;
-  about: string;
-  email: string;
-  website: string;
-  category: string;
-  top: boolean
-}
+import { HeaderComponent } from "../header/header.component";
+import { DataService } from '../data.service';
 
 
 
 @Component({
   selector: 'app-batiment',
   standalone: true,
-  imports: [CommonModule, FormsModule, SearchPipe],
+  imports: [CommonModule, FormsModule, FilterByCategoryPipe, HeaderComponent, ListeArtisanComponent],
   templateUrl: './batiment.component.html',
   styleUrl: './batiment.component.scss',
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }],
 })
 export class BatimentComponent {
-artisans: Top3[] = [];
-  selectedProductId: number = 1;
-  searchArtisans: string = "";
-  order: "asc" | "desc" = "asc";
+  categorie: string = ""
+  sort:any
+  searchTerm:string = ""
+  recherche:any = ""
   
-
   constructor (
     private router: Router,
-    private ArtisanserviceService: ArtisanserviceService,
+    private DataService : DataService,
+    private route: ActivatedRoute,
   ) {}
-  
-  triArtisans (event:Event) {
-    const target = event.target as HTMLSelectElement;
-    const value = target.value;
-    if (value === "asc" || value === "desc") {
-      this.order = value;
-    }
-  }
-
   
 
   ngOnInit(): void {
-   this.artisans = this.ArtisanserviceService.getArtisans();
+    this.route.params.subscribe(params => {
+      this.categorie = params["categorie"];
+    })
+
+    this.route.queryParams
+    .subscribe((params) => {
+    this.recherche = params;
+    this.recherche = this.recherche.search
+    })
+
+    this.sort = this.DataService.ListArtisans
   }
 
-  showFigurines(productId: number) {
-    this.selectedProductId = productId;
-    this.router.navigate(["/product", productId]);
-  }
 }

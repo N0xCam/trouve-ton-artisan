@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { ArtisanserviceService } from '../artisanservice.service';
 import { ActivatedRoute } from "@angular/router";
 import { CommonModule} from "@angular/common";
-import { TopPipe } from '../top.pipe';
+import { TopPipe } from '../pipes/top.pipe';
 import { Router } from '@angular/router';
 
 export interface Top3 {

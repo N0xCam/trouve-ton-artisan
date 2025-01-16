@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Artisan } from './artisanservice.service';
+import { Artisan } from '../artisanservice.service'
 
 @Pipe({
   name: 'sortByName',

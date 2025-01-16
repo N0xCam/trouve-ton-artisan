@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Top3 } from './home/home.component';
+import { Top3 } from '../home/home.component'
+
 
 @Pipe({
   name: 'top',

@@ -15,25 +15,23 @@ import { FabricationComponent } from './fabrication/fabrication.component';
 import { AlimentationComponent } from './alimentation/alimentation.component';
 import { ArtisanserviceService } from './artisanservice.service';
 import { HttpClientModule } from '@angular/common/http';
-import { TopPipe } from './top.pipe';
-import { SortByNamePipe } from './sort-by-name.pipe';
-import { BatimentPipe } from './batiment.pipe';
-import { SearchPipe } from './search.pipe';
+import { TopPipe } from '../app/pipes/top.pipe';
+import { SortByNamePipe } from '../app/pipes/sort-by-name.pipe';
+import { BatimentPipe } from './pipes/batiment.pipe';
+import { SearchPipe } from './pipes/search.pipe';
+import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-  
-    ListeArtisanComponent,
-    FicheArtisanComponent,
-
     FooterComponent,
     LegalComponent,
     NotFoundComponent,
     ServicesComponent,
-    
+    FicheArtisanComponent,
     FabricationComponent,
-    AlimentationComponent
+    AlimentationComponent,
+   
 
     
     
@@ -45,7 +43,9 @@ import { SearchPipe } from './search.pipe';
     BatimentComponent,
     AppRoutingModule,
     HttpClientModule,
+    ListeArtisanComponent,
     BatimentPipe,
+    FilterByCategoryPipe,
     SortByNamePipe,
     TopPipe,
     SearchPipe,

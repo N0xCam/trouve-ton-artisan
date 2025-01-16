@@ -3,7 +3,7 @@ import { Top3 } from '../home/home.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule} from "@angular/common";
 import { ArtisanserviceService } from '../artisanservice.service';
-import { SearchPipe } from '../search.pipe';
+import { SearchPipe } from '../pipes/search.pipe';
 import { Router } from '@angular/router';
 
 export interface Artisan {

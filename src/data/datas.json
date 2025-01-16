@@ -1,3 +1,6 @@
+{ 
+	"dataArtisans":
+
 [
 	{
 		"id": "1",
@@ -202,5 +205,6 @@
 		"website":"https://sup-hair.fr",
 		"category":"Services",
 		"top": false
-	},
+	}
 ]
+}
