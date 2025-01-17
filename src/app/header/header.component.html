@@ -1,4 +1,4 @@
-<nav class="bg-blue-600 p-4">
+<nav class="navBar">
   <div class="container mx-auto flex items-center justify-between">
   <a href="/">
       <img 
@@ -6,16 +6,33 @@
           alt="logo"
           class="logo">
       </a>
-    <div class="hidden md:flex space-x-4">
-      <a href="/batiment" class="text-white hover:text-gray-300">Bâtiment</a>
-      <a href="/services" class="text-white hover:text-gray-300">Services</a>
-      <a href="/fabrication" class="text-white hover:text-gray-300">Fabrication</a>
-      <a href="/alimentation" class="text-white hover:text-gray-300">Alimentation</a>
-    </div>
-    <button class="md:hidden text-white focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-</nav>
+   
+
+<ul>
+  <li>
+    <a routerLink="/list/Bâtiment" class="navLink">Bâtiment</a>
+  </li>
+  <li>
+    <a routerLink="/list/Services" class="navLink">Services</a>
+  </li>
+  <li>
+    <a routerLink="/list/Fabrication" class="navLink">Fabrication</a>
+  </li>
+  <li>
+    <a routerLink="/list/Alimentation" class="navLink">Alimentation</a>
+  </li>
+</ul>
+
+<div class="divSearch"> 
+  <div> 
+  <a routerLink="/">
+    <form (input)="onSearchInput(searchInput.value)" class="searchBar">
+      <div class="pointer-events-none flex items-center pl-3"></div>
+      <input type="text" #searchInput placeholder="Rechercher un artisan" class="searchInput">
+    </form>
+  </a>
+</div>
+
+
+
+
