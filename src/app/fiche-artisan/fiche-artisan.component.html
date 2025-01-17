@@ -1,1 +1,55 @@
-<p>fiche-artisan works!</p>
+<h2 class="mb-5">Votre artisan</h2>
+
+  
+    <div *ngIf="artisans" id="ficheArtisan">
+
+        <p> {{artisans.name}}</p>
+            
+        <section *ngIf="artisans">
+            <div class="Product-card">
+             
+              <div class="card-body">
+                <h3 class="product-card-title">{{ artisans.name }}</h3>
+                <p class="product-card-text">{{ artisans.specialty }}</p>
+                <p class="product-card-text">{{ artisans.image }}</p>
+               
+          
+              
+              </div>
+            </div>
+          </section>
+
+          <form (submit)="emailSent($event)">
+            <h3 class="titleForm"> Nous contacter </h3>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Votre nom</label>
+                <input type="text" name="user_name" class="form-control" placeholder="Jules" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Votre prénom</label>
+                <input type="text" name="user_firstname" class="form-control" placeholder="César" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Votre adresse mail</label>
+                <input type="email" name="mail" id="exampleFormControlInput1" placeholder="name@example.com" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Votre numéro de téléphone</label>
+                <input type="text" name="tel" id="exampleFormControlInput1" placeholder="0600000000" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">L'objet de votre demande</label>
+                <textarea class="form-control" name="object"id="exampleFormControlTextarea1" rows="1"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
+                <textarea class="form-control" name="message"id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="submit"> Envoyer</button>
+              </form>
+            

@@ -1,5 +1,6 @@
 <section class="tuto">
-<h2 class="tutoTitle"> Comment trouver mon artisan ? </h2>
+
+  <h2 class="tutoTitle"> Comment trouver mon artisan ? </h2>
 <ul class="tutoText">
     <li>
         1. Choisir la catégorie d'artisanat dans le menu.
@@ -14,37 +15,57 @@
         Une réponse vous sera apportée sous 48h.
     </li>
 </ul>    
-</section>
+
 
 
 <section class="Top3">
     <h2 class="Top3Title"> Les trois artisans du mois : </h2>
-       
-<div class="cardTop">
-<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/docs/images/blog/image-4.jpg" alt="">
-    <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Nom, raison sociale</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Note, spécialité blablabla</p>
-    </div>
-</a>
+
+<ng-container *ngFor="let artisan of artisans">
+  <li *ngIf="artisan.top">
+   
+  <div class="cardTop"> 
+    <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <img  [src]="artisan.image" alt="image des artisans" class="imgHome">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ artisan.name }}</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ artisan.specialty }}</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ artisan.location }}</p>
+            
+    
+        </div>
+    </a>
 
 
-<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/docs/images/blog/image-4.jpg" alt="">
-    <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Nom, raison sociale</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Note, spécialité blablabla</p>
-    </div>
-</a>
+    <div *ngIf="isSearching" id="carte"  class="popup-message">
+        <div *ngIf="selectedArtisans && selectedArtisans.length > 0" id="ficheList">
+            <div *ngFor="let artisan of selectedArtisans">
+                <div id="fiche">
+                    <a [routerLink]="['/fiche-artisan', artisan.id]">
+                        <h2>Artisan recherché</h2>
+                        <p><strong>{{ artisan.name }}</strong></p>
+                        <div id="notes">
+                            <p class="mb-0">Note: {{artisan.note}}</p>
+                            
+                        </div>
+                        <p>Spécialité: {{ artisan.specialty }}</p>
+                        <p>Ville: {{ artisan.location }}</p>
+                    </a>
+                </div>
+
+                <p *ngIf="selectedArtisans && selectedArtisans.length === 0" class="popup-message">
+                    Aucun artisan ne correspond à votre recherche.
+                  </p>
+            </div>
+  
 
 
-<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/docs/images/blog/image-4.jpg" alt="">
-    <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Nom, raison sociale</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Note, spécialité blablabla</p>
-    </div>
-</a>
-</div>
-</section>
+
+   
+
+
+
+    
+
+        
+

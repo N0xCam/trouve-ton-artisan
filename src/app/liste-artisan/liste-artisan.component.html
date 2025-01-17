@@ -1,1 +1,16 @@
-<p>liste-artisan works!</p>
+<div class="d-flex justify-content-center" id="itemsDiv">
+    <div id="items">
+        <ul *ngFor="let artisan of artisans | filterByCategory:selectedCategory" id="ficheList"> 
+            <li id="fiche">
+            <a [routerLink]="['/fiche-artisan', artisan.id]">
+                    <p><strong>{{artisan.name}}</strong></p>
+                    <div id="notes">
+                        <p class="mb-0">Note: {{artisan.note}}</p>
+                    </div>
+                    <p>Spécialité: {{artisan.specialty}}</p>
+                    <p>Ville: {{artisan.location}}</p>
+                    <p class="product-card-text">{{ artisan.image }}</p>
+                </a>
+            </li>
+        </ul>
+    </div>

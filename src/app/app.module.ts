@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -10,31 +9,38 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LegalComponent } from './legal/legal.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { BatimentComponent } from './batiment/batiment.component';
-import { ServicesComponent } from './services/services.component';
-import { FabricationComponent } from './fabrication/fabrication.component';
-import { AlimentationComponent } from './alimentation/alimentation.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TopPipe } from '../app/pipes/top.pipe';
+import { SortByNamePipe } from './pipes/filter-by-name.pipe';
+import { BatimentPipe } from './pipes/batiment.pipe';
+import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
+import { FilterByLocationPipe } from './pipes/filter-by-location.pipe';
+import { FilterVySpecialyPipe } from './pipes/filter-by-specialy.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ListeArtisanComponent,
-    FicheArtisanComponent,
-    HeaderComponent,
     FooterComponent,
     LegalComponent,
     NotFoundComponent,
-    BatimentComponent,
-    ServicesComponent,
-    FabricationComponent,
-    AlimentationComponent
+ 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HeaderComponent,
+
+    AppRoutingModule,
+    HttpClientModule,
+    FicheArtisanComponent,
+    ListeArtisanComponent,
+    BatimentPipe,
+    FilterByCategoryPipe,
+    SortByNamePipe,
+    TopPipe,
+    FilterByLocationPipe,
+    FilterVySpecialyPipe,
   ],
-  providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

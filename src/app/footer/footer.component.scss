@@ -30,10 +30,14 @@
     color: #f1f8fc;
 }
 
+.contactUs {
+    display: flex;
+    flex-direction: row;
+}
+
 .myContact {
     padding-top: 0.7em;
     padding-bottom: 0.7em;
-    text-align: right;
     display: flex;
 }
 
@@ -56,6 +60,7 @@
     padding-bottom: 1em;
     font-size: 0.7em;
     text-decoration: none;
+    font-family: 'Grafik-Light';
 }
 
 .legalCopyright {
@@ -79,7 +84,6 @@
 
 .address {
     display: flex;
-    flex-direction: row;
     width: 100%;
     
 }
