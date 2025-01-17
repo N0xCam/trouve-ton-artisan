@@ -1,12 +1,10 @@
-import { Component, OnInit, Output, LOCALE_ID } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ArtisanserviceService } from '../artisanservice.service';
-import { ActivatedRoute } from "@angular/router";
+import { Component } from '@angular/core';
+import { SearchArtisanService } from '../services/search-artisan.service';
+import { ActivatedRoute, RouterLink } from "@angular/router";
 import { CommonModule} from "@angular/common";
-import { TopPipe } from '../pipes/top.pipe';
-import { Router } from '@angular/router';
+import * as artisanData from "../../data/datas.json"
 
-export interface Top3 {
+export interface Artisan {
   id: number;
   image:string;
   name: string;
@@ -24,32 +22,33 @@ export interface Top3 {
   selector: 'app-home',
   templateUrl: './home.component.html',
   standalone: true,
-  imports: [CommonModule, FormsModule, TopPipe],
+  imports: [CommonModule, RouterLink],
   styleUrl: './home.component.scss',
-  providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }],
 })
 
 
-export class HomeComponent implements OnInit{
-  artisans: Top3[] = [];
-  selectedProductId: number = 1;
-  searchfig: string = "";
-  order: "asc" | "desc" = "asc";
+export class HomeComponent {
+  artisans: any[] = (artisanData as any).default;
+  selectedArtisans: any[] | null = null;
 
   constructor (
-    private router: Router,
-    private ArtisanserviceService: ArtisanserviceService,
+    private route: ActivatedRoute,
+    private searchArtisanService: SearchArtisanService
   ) {}
   
-  triArtisans (event:Event) {
-    const target = event.target as HTMLSelectElement;
-    const value = target.value;
-    if (value === "asc" || value === "desc") {
-      this.order = value;
-    }
-  }
   ngOnInit(): void {
-   this.artisans = this.ArtisanserviceService.getArtisans();
+    this.route.paramMap.subscribe((params) => {
+      const artisanId = params.get('id');
+    });
+
+    this.searchArtisanService.artisanSelected$.subscribe((artisans) => {
+      this.selectedArtisans = artisans;
+    });
   }
+
+  get isSearching(): boolean {
+    return this.selectedArtisans !== null;
+  }
+
 
 }

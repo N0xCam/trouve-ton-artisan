@@ -1,32 +1,48 @@
+.navBar {
+    display: flex;
+    flex-direction: column;
+    background-color: #0074c7;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+.searchBar {
+    display: flex;
+    flex-direction: column;  
+}
+
+.navLink {
+    font-family: "Grafik-Light";
+    color: #f1f8fc;
+}
+
+.divSearch {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 992px) {
 .menu {
     display: flex;
 }
 
 .logo {
-    height: 6em;
-    width: 10em;
-    background-color: #f1f8fc;
+    height: 10em;
+    width: 20em;
     margin: 2em;
 }
 
-.navColor {
-    background-color: #00497C;
+ul {
+    width: 30em;
+    display: flex;
+    flex-direction: row;
 }
-
-.navlink {
-    color: #f1f8fc;
-    text-transform: uppercase;
-    font-family: 'Grafik-Light';
+.navLink {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    width: 8em;
 }
-
-.searchLogo {
-    width: 1em;
-}
-
-.sr-only {
-    font-family:'Grafik-Light' ;
-}
-
-.SearchBar {
-    width: 100%;
 }

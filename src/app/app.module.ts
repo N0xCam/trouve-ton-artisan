@@ -9,17 +9,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LegalComponent } from './legal/legal.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { BatimentComponent } from './batiment/batiment.component';
-import { ServicesComponent } from './services/services.component';
-import { FabricationComponent } from './fabrication/fabrication.component';
-import { AlimentationComponent } from './alimentation/alimentation.component';
-import { ArtisanserviceService } from './artisanservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TopPipe } from '../app/pipes/top.pipe';
-import { SortByNamePipe } from '../app/pipes/sort-by-name.pipe';
+import { SortByNamePipe } from './pipes/filter-by-name.pipe';
 import { BatimentPipe } from './pipes/batiment.pipe';
-import { SearchPipe } from './pipes/search.pipe';
 import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
+import { FilterByLocationPipe } from './pipes/filter-by-location.pipe';
+import { FilterVySpecialyPipe } from './pipes/filter-by-specialy.pipe';
 
 @NgModule({
   declarations: [
@@ -27,30 +23,24 @@ import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
     FooterComponent,
     LegalComponent,
     NotFoundComponent,
-    ServicesComponent,
-    FicheArtisanComponent,
-    FabricationComponent,
-    AlimentationComponent,
-   
-
-    
-    
+ 
   ],
   imports: [
     BrowserModule,
-    HomeComponent,
     HeaderComponent,
-    BatimentComponent,
+
     AppRoutingModule,
     HttpClientModule,
+    FicheArtisanComponent,
     ListeArtisanComponent,
     BatimentPipe,
     FilterByCategoryPipe,
     SortByNamePipe,
     TopPipe,
-    SearchPipe,
+    FilterByLocationPipe,
+    FilterVySpecialyPipe,
   ],
-  providers: [ArtisanserviceService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

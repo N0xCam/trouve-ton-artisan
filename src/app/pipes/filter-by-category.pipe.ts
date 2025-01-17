@@ -6,9 +6,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterByCategoryPipe implements PipeTransform {
 
-  transform(items:any[], cat:string): any[] {
-    cat=cat.toLowerCase()
-    return items.filter(items => items.category.toLowerCase().includes(cat))
-  }
-
-}
+  
+  transform(artisans: any[],
+    search: string): any[] {
+       if (!artisans) return [];
+       if (!search) return artisans;
+       search = search.toLowerCase();
+       return artisans.filter(it => it.category.toLowerCase().includes(search));
+     }
+   }

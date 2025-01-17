@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Top3 } from '../home/home.component'
+
 
 
 @Pipe({
@@ -8,13 +8,9 @@ import { Top3 } from '../home/home.component'
 })
 export class TopPipe implements PipeTransform {
 
-  transform(top: Top3[], searchTerm: string): Top3[] {
-    if (!top || !searchTerm) {
-      return top;
+  transform(value: any, ...args: any[]) {
+    
+  }
     }
 
-      return top.filter((top) =>
-        top.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-  }
+    
