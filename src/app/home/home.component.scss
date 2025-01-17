@@ -1,3 +1,9 @@
+.tuto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .tutoTitle {
     font-family: 'Grafik-Bold' ;
     display: flex;
@@ -13,6 +19,8 @@
     display: flex;
     flex-direction: column;
     text-align:center;
+    width: 100%;
+    justify-content:center;
 }
 
 .Top3Title {
@@ -25,11 +33,10 @@
     font-size: 1.5em;
 }
 
-.cardTop {
+.popup-message {
+    
+    margin-top:-35em;
     display: flex;
-}
-
-.imgHome {
-    width: 15em;
-    height: 15em;
+    flex-direction: column;
+    text-align:right;
 }

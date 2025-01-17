@@ -1,3 +1,31 @@
+
+.conponentFooter {
+    font-family: "Grafik-Light";
+    color: #f1f8fc;
+    background-color: #00497c;
+}
+
+.footerTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.myContact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1em;
+}
+
+svg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 .myFooter {
     width: 100%;
     display: flex;
@@ -28,17 +56,6 @@
     text-align:right;
     width: 100%;
     color: #f1f8fc;
-}
-
-.contactUs {
-    display: flex;
-    flex-direction: row;
-}
-
-.myContact {
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;
-    display: flex;
 }
 
 .legal {
@@ -82,31 +99,34 @@
     padding-top: 0.2em;
 }
 
+.footerTitle {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+}
+
+.tel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.myadress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .address {
     display: flex;
-    width: 100%;
-    
+  
+}
+
+.m {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 
-
-
-@media (min-width: 992px) {
-    .navLink {
-        font-size: 1em;
-    }
-    .contactUs {
-        font-size: 1em;
-    }
-    .Icons {
-        padding-top:1.2em;
-    }
-    .X {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-    }
-    small {
-        font-size: 0.7em;
-    }
-}
 
