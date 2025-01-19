@@ -8,6 +8,8 @@
     font-family: 'Grafik-Bold';
     flex-direction: column;
     text-align: center;
+    font-size: 2em;
+    color: #384050
 }
 
 .notWorking {
@@ -17,9 +19,15 @@
 .butLegal {
     margin-top: 2em;
     margin-bottom: 2em;
+    font-size: 1.2em;
 }
 
 .textBut {
     font-family: 'Grafik-Light';
     text-transform: none;
+}
+
+button {
+    margin-bottom: 2em;
+    margin-top: 1em;
 }

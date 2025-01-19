@@ -1,10 +1,28 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.tuto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+dd {
+    border-left: 0.2em solid #cd2c2e ;
+    text-align: start;
+}
+
 .tutoTitle {
     font-family: 'Grafik-Bold' ;
+    text-decoration: underline #82b864 0.2em;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 1em;
     padding-bottom: 1em;
+    line-height: 2em;
     font-size: 1.5em;
 }
 
@@ -13,23 +31,68 @@
     display: flex;
     flex-direction: column;
     text-align:center;
+    width: 100%;
+    justify-content:center;
+}
+
+.Top3 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
 }
 
 .Top3Title {
     font-family: 'Grafik-Bold' ;
     display: flex;
     flex-direction: column;
-    text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
     font-size: 1.5em;
+    text-decoration: underline #82b864 0.2em;
 }
 
 .cardTop {
+    width: 30em;
+}
+
+.p-5{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+h3 {
+    border-left: 0.2em solid #cd2c2e ;
+}
+
+.TopArtisans {
+    width: 50em;
+    padding-bottom: 2em;
     display: flex;
 }
 
-.imgHome {
-    width: 15em;
-    height: 15em;
+p {
+    display: flex;
+    justify-content: space-around;
+}
+
+.work {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+
+@media (max-width: 992px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .Top3Title {
+        text-align: center;
+       
+    }
 }

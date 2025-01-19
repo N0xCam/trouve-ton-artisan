@@ -1,0 +1,22 @@
+.listeArtisan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+#listName {
+    border-left: 0.2em solid #cd2c2e;
+}
+
+.titleListe {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Grafik-Bold";
+    font-size: 1.5em;
+    padding-top: 1em;
+    text-decoration: underline #82b864 0.2em;
+}

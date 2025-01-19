@@ -1,55 +1,54 @@
-<h2 class="mb-5">Votre artisan</h2>
+<main>
+<h2 class="titleMyArtisan">Votre artisan</h2>
 
+<!-- Afficher la liste d'artisans ayant la spécialité indiquée -->
   
     <div *ngIf="artisans" id="ficheArtisan">
 
-        <p> {{artisans.name}}</p>
-            
-        <section *ngIf="artisans">
-            <div class="Product-card">
-             
-              <div class="card-body">
-                <h3 class="product-card-title">{{ artisans.name }}</h3>
-                <p class="product-card-text">{{ artisans.specialty }}</p>
-                <p class="product-card-text">{{ artisans.image }}</p>
-               
-          
-              
-              </div>
-            </div>
-          </section>
+<div class="ficheArtisanSelected"></div>
+<div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="p-5" id="titleArtisan">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" id="artisanName">{{artisans.name}} </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ artisans.specialty }}</p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ artisans.about }}</p>
+      
+  </div>
+</div>
 
-          <form (submit)="emailSent($event)">
-            <h3 class="titleForm"> Nous contacter </h3>
+<!-- Envoyer mail via Email.js -->
+          <form (submit)="emailSent($event)" class="max-w-md mx-auto">
+            <h3 class="titleContact"> Contacter cet artisan</h3>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Votre nom</label>
-                <input type="text" name="user_name" class="form-control" placeholder="Jules" required>
+                <input type="text" name="user_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Jules" required>
               </div>
             
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Votre prénom</label>
-                <input type="text" name="user_firstname" class="form-control" placeholder="César" required>
+                <input type="text" name="user_firstname" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="César" required>
               </div>
             
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Votre adresse mail</label>
-                <input type="email" name="mail" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                <input type="email" name="mail" id="exampleFormControlInput1" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="name@example.com" required>
               </div>
 
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Votre numéro de téléphone</label>
-                <input type="text" name="tel" id="exampleFormControlInput1" placeholder="0600000000" required>
+                <input type="text" name="tel" id="exampleFormControlInput1" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="0600000000" required>
               </div>
 
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">L'objet de votre demande</label>
-                <textarea class="form-control" name="object"id="exampleFormControlTextarea1" rows="1"></textarea>
+                <textarea class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" name="object"id="exampleFormControlTextarea1" rows="1"></textarea>
               </div>
 
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
-                <textarea class="form-control" name="message"id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" name="message"id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
-              <button type="submit"> Envoyer</button>
+              <button type="submit" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" id="submit"> Envoyer</button>
               </form>
-            
+                        
+
+              

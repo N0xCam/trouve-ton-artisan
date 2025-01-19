@@ -1,66 +1,77 @@
+<main class="home">
 <section class="tuto">
 
   <h2 class="tutoTitle"> Comment trouver mon artisan ? </h2>
-<ul class="tutoText">
-    <li>
-        1. Choisir la catégorie d'artisanat dans le menu.
-    </li>
-    <li>
-       2. Choisir un artisan
-    </li>
-    <li>
-       3. Remplir le formulaire de contact
-    </li>
-    <li>
-        Une réponse vous sera apportée sous 48h.
-    </li>
-</ul>    
 
+<div class="tutoText">
+    <div class="flex flex-col py-3">
+        
+        <dd class="text-lg font-semibold">  Choisir la catégorie d'artisanat dans le menu.</dd>
+    </div>
+    <div class="flex flex-col py-3">
+        <dd class="text-lg font-semibold"> Choisir un artisan.</dd>
+    </div>
+    <div class="flex flex-col pt-3">
+        <dd class="text-lg font-semibold"> Remplir le formulaire de contact.</dd>
+    </div>
+    <div class="flex flex-col pb-3">
+        <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Une réponse vous sera apportée sous 48h.</dt>
+    
+    </div>
 
+</div>
+</section>
 
+<!-- Top 3 -->
 <section class="Top3">
     <h2 class="Top3Title"> Les trois artisans du mois : </h2>
 
 <ng-container *ngFor="let artisan of artisans">
-  <li *ngIf="artisan.top">
+  <li *ngIf="artisan.top" class="cardTop">
    
-  <div class="cardTop"> 
-    <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-        <img  [src]="artisan.image" alt="image des artisans" class="imgHome">
-        <div class="flex flex-col justify-between p-4 leading-normal">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ artisan.name }}</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ artisan.specialty }}</p>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ artisan.location }}</p>
+  <div class="TopArtisans">
+  <div class="white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="p-5">
+        <a href="#">
+            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ artisan.name }}</h3>
+        </a>
+        <p class="work"> Métier : {{ artisan.specialty }}</p>
+        <p class="localisation"> Commune : {{ artisan.location }}</p>
+        <p class="note"> Note {{ artisan.note }}/5</p>
+        <a [routerLink]="['/fiche-artisan', artisan.id]" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Voir cet artisan
+             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+
+        </a>
+    </div>
+</div>
+</div>  
+
+
+<!-- Résultat de recherche -->
+<div *ngIf="isSearching" id="carte"  class="resultSearch">
+    <div *ngIf="selectedArtisans && selectedArtisans.length > 0">
+        <div *ngFor="let artisan of selectedArtisans">
+            <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                <div class="flex flex-col pb-3">
+                <a [routerLink]="['/fiche-artisan', artisan.id]">
+                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400"> Artisan trouvé !</dt>
+                    <dd class="text-lg font-semibold"> Nom : {{ artisan.name }}
+                    <dd class="text-lg font-semibold"> Note : {{artisan.note}}
+                    <dd class="text-lg font-semibold"> Métier : {{ artisan.specialty }}
+                    <dd class="text-lg font-semibold"> Commune : {{ artisan.location }}
+                
             
+        
     
-        </div>
-    </a>
-
-
-    <div *ngIf="isSearching" id="carte"  class="popup-message">
-        <div *ngIf="selectedArtisans && selectedArtisans.length > 0" id="ficheList">
-            <div *ngFor="let artisan of selectedArtisans">
-                <div id="fiche">
-                    <a [routerLink]="['/fiche-artisan', artisan.id]">
-                        <h2>Artisan recherché</h2>
-                        <p><strong>{{ artisan.name }}</strong></p>
-                        <div id="notes">
-                            <p class="mb-0">Note: {{artisan.note}}</p>
-                            
-                        </div>
-                        <p>Spécialité: {{ artisan.specialty }}</p>
-                        <p>Ville: {{ artisan.location }}</p>
-                    </a>
-                </div>
-
-                <p *ngIf="selectedArtisans && selectedArtisans.length === 0" class="popup-message">
-                    Aucun artisan ne correspond à votre recherche.
-                  </p>
-            </div>
-  
 
 
 
+                
+
+                
    
 
 

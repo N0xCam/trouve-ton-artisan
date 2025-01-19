@@ -1,7 +1,6 @@
 [
 	{
 		"id": "1",
-		"image":"./public/img/1.jpg",
 		"name": "Vallis Bellemare",
 		"specialty": "Plombier",
 		"note": "4",
@@ -14,7 +13,6 @@
 	},
 	{
 		"id": "2",
-		"image":"/img/2.jpg",
 		"name": "Amitee Lécuyer",
 		"specialty": "Couturier",
 		"note": "4.5",
@@ -27,7 +25,6 @@
 	},
 	{
 		"id": "3",
-		"image":"/img/3",
 		"name": "Leala Dennis",
 		"specialty": "Coiffeur",
 		"note": "3.8",
@@ -40,7 +37,6 @@
 	},
 	{
 		"id": "4",
-		"image":"/img/4",
 		"name": "Chocolaterie Labbé",
 		"specialty": "Chocolatier",
 		"note": "4.9",
@@ -53,7 +49,6 @@
 	},
 	{
 		"id": "5",
-		"image":"/img/5",
 		"name": "Claude Quinn",
 		"specialty": "Bijoutier",
 		"note": "4.2",
@@ -66,7 +61,6 @@
 	},
 	{
 		"id": "6",
-		"image":"/img/6",
 		"name": "Valérie Laderoute",
 		"specialty": "Toiletteur",
 		"note": "4.5",
@@ -79,7 +73,6 @@
 	},
 	{
 		"id": "7",
-		"image":"/img/7",
 		"name": "Boutot & fils",
 		"specialty": "Menuisier",
 		"note": "4.7",
@@ -92,7 +85,6 @@
 	},
 	{
 		"id": "8",
-		"image":"/img/8",
 		"name": "CM Graphisme",
 		"specialty": "Webdesign",
 		"note": "4.4",
@@ -105,7 +97,6 @@
 	},
 	{
 		"id": "9",
-		"image":"/img/9",
 		"name": "Orville Salmons",
 		"specialty": "Chauffagiste",
 		"note": "5",
@@ -118,7 +109,6 @@
 	},
 	{
 		"id": "10",
-		"image":"/img/10",
 		"name": "Au pain chaud",
 		"specialty": "Boulanger",
 		"note": "4.8",
@@ -131,7 +121,6 @@
 	},
 	{
 		"id": "11",
-		"image":"/img/11",
 		"name": "Boucherie Dumont",
 		"specialty": "Boucher",
 		"note": "4.5",
@@ -144,7 +133,6 @@
 	},
 	{
 		"id": "12",
-		"image":"/img/12",
 		"name": "Mont Blanc Eléctricité",
 		"specialty": "Electricien",
 		"note": "4.5",
@@ -157,7 +145,6 @@
 	},
 	{
 		"id": "13",
-		"image":"/img/13",
 		"name": "Traiteur Truchon",
 		"specialty": "Traiteur",
 		"note": "4.1",
@@ -170,7 +157,6 @@
 	},
 	{
 		"id": "14",
-		"image":"/img/14",
 		"name": "Le monde des fleurs",
 		"specialty": "Fleuriste",
 		"note": "4.6",
@@ -183,7 +169,6 @@
 	},
 	{
 		"id": "15",
-		"image":"/img/15",
 		"name": "Royden Charbonneau",
 		"specialty": "Carrossier",
 		"note": "3.8",
@@ -196,7 +181,6 @@
 	},
 	{
 		"id": "16",
-		"image":"/img/16",
 		"name": "Ernest Carignan",
 		"specialty": "Ferronnier",
 		"note": "5",
@@ -209,7 +193,6 @@
 	},
 	{
 		"id": "17",
-		"image":"/img/17",
 		"name": "C'est sup'hair",
 		"specialty": "Coiffeur",
 		"note": "4.1",
