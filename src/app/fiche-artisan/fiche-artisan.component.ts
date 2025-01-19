@@ -37,7 +37,6 @@ emailjs
   })
   .then(
     () => {
-      console.log('SUCCESS!');
       this.messageSent = true; 
       (e.target as HTMLFormElement).reset(); 
     },

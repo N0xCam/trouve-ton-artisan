@@ -8,6 +8,8 @@
     flex-direction: column;
     text-align: center;
     font-size: 2em;
+    padding-bottom: 2em;
+    text-decoration: underline #82b864 0.2em;
 }
 
 .titleContact {
@@ -16,9 +18,25 @@
     flex-direction: column;
     text-align: center;
     font-size: 2em;
+    text-decoration: underline #82b864 0.2em;
 }
 
 .ficheArtisanSelected {
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+
+#artisanName {
+    text-decoration: underline #cd2c2e 0.2em;
+}
+
+#titleArtisan {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#submit {
+    margin-bottom: 2em;
 }
