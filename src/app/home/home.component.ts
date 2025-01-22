@@ -29,26 +29,16 @@ export interface Artisan {
 
 export class HomeComponent {
   artisans: any[] = (artisanData as any).default;
-  selectedArtisans: any[] | null = null;
-
+  
   constructor (
     private route: ActivatedRoute,
-    private searchArtisanService: SearchArtisanService
   ) {}
   
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      const artisanId = params.get('id');
-    });
+ 
+    };
 
-    this.searchArtisanService.artisanSelected$.subscribe((artisans) => {
-      this.selectedArtisans = artisans;
-    });
-  }
-
-  get isSearching(): boolean {
-    return this.selectedArtisans !== null;
   }
 
 
-}
+
