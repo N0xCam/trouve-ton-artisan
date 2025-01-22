@@ -38,6 +38,20 @@
   </a>
 </div>
 
-
+<!-- Résultat de recherche -->
+<section class="search">
+  <div *ngIf="isSearching" id="carte"  class="resultSearch">
+      <div *ngIf="selectedArtisans && selectedArtisans.length > 0">
+          <div *ngFor="let artisan of selectedArtisans">
+              <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                  <div class="flex flex-col pb-3">
+                  <button><a [routerLink]="['/fiche-artisan', artisan.id]">
+                      <dt class="titleSearch"> Artisan trouvé !</dt>
+                      <dd class="text-lg font-semibold"> Nom : {{ artisan.name }}
+                      <dd class="text-lg font-semibold"> Note : {{artisan.note}}
+                      <dd class="text-lg font-semibold"> Métier : {{ artisan.specialty }}
+                      <dd class="text-lg font-semibold"> Commune : {{ artisan.location }}
+                      
+                  
 
 
