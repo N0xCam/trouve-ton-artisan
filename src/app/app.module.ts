@@ -10,10 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LegalComponent } from './legal/legal.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SortByNamePipe } from './pipes/filter-by-name.pipe';
 import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
-import { FilterByLocationPipe } from './pipes/filter-by-location.pipe';
-import { FilterVySpecialyPipe } from './pipes/filter-by-specialy.pipe';
 
 @NgModule({
   declarations: [
@@ -31,9 +28,6 @@ import { FilterVySpecialyPipe } from './pipes/filter-by-specialy.pipe';
     FicheArtisanComponent,
     ListeArtisanComponent,
     FilterByCategoryPipe,
-    SortByNamePipe,
-    FilterByLocationPipe,
-    FilterVySpecialyPipe,
   ],
 
   bootstrap: [AppComponent]
