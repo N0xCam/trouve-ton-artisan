@@ -10,9 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LegalComponent } from './legal/legal.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TopPipe } from '../app/pipes/top.pipe';
 import { SortByNamePipe } from './pipes/filter-by-name.pipe';
-import { BatimentPipe } from './pipes/batiment.pipe';
 import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
 import { FilterByLocationPipe } from './pipes/filter-by-location.pipe';
 import { FilterVySpecialyPipe } from './pipes/filter-by-specialy.pipe';
@@ -28,15 +26,12 @@ import { FilterVySpecialyPipe } from './pipes/filter-by-specialy.pipe';
   imports: [
     BrowserModule,
     HeaderComponent,
-
     AppRoutingModule,
     HttpClientModule,
     FicheArtisanComponent,
     ListeArtisanComponent,
-    BatimentPipe,
     FilterByCategoryPipe,
     SortByNamePipe,
-    TopPipe,
     FilterByLocationPipe,
     FilterVySpecialyPipe,
   ],

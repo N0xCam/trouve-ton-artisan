@@ -18,7 +18,7 @@ export class HeaderComponent {
   selectedArtisans: any[] | null = null;
  
   constructor (
-        private route: ActivatedRoute,
+    private route: ActivatedRoute,
     private SearchArtisanService: SearchArtisanService,
   ) { }
 
